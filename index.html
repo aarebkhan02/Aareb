@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Aareb Khan — Developer, Data Analyst & AI Engineer</title>
+  <meta name="description" content="Portfolio of Aareb Khan. MERN Stack Developer, Aspiring Data Analyst, and AI Engineer enthusiast building modern web experiences and intelligent AI solutions." />
+  <meta name="keywords" content="Aareb Khan, MERN Stack Developer, Data Analyst, AI Engineer, Machine Learning, Deep Learning, Portfolio" />
+  <meta name="author" content="Aareb Khan" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aareb Khan — Developer & AI Enthusiast Portfolio" />
+  <meta property="og:description" content="Building modern web experiences, intelligent AI solutions, and data-driven applications." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Typography: Plus Jakarta Sans, Syne, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Geometric Square Background Canvas -->
+  <canvas id="universe-canvas" aria-hidden="true"></canvas>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="nav-wrapper">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#hero" class="nav-logo" aria-label="Aareb Khan Home">
+        <span class="logo-bold">AAREB</span>
+        <span class="logo-thin">KHAN</span>
+        <span class="logo-dot">■</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Expertise</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="AarebResume.pdf" download="AarebResume.pdf" class="btn btn-primary nav-btn-cta" aria-label="Download CV">
+          <span>Resume</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar top"></span>
+          <span class="bar bottom"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Expertise</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Work</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="AarebResume.pdf" download="AarebResume.pdf" class="btn btn-primary btn-full">
+          <span>Download Resume</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- 00 / HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-badge reveal-fade">
+            <span class="status-indicator"></span>
+            <span class="badge-text">HELLO, I'M AAREB</span>
+          </div>
+          
+          <h1 class="hero-title reveal-fade delay-1">
+            Aareb Khan<span class="hero-title-accent">.</span>
+          </h1>
+
+          <div class="hero-headline-block reveal-fade delay-2">
+            <span class="headline-item">MERN Stack Developer</span>
+            <span class="headline-sep">/</span>
+            <span class="headline-item">Data Analyst</span>
+            <span class="headline-sep">/</span>
+            <span class="headline-item">AI Engineer Enthusiast</span>
+          </div>
+
+          <p class="hero-description reveal-fade delay-3">
+            I build responsive web applications, explore intelligent AI solutions, and transform data into meaningful insights.
+          </p>
+
+          <div class="hero-cta-group reveal-fade delay-4">
+            <a href="AarebResume.pdf" download="AarebResume.pdf" class="btn btn-primary" aria-label="Download Aareb Khan's Resume">
+              <span>Download Resume</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+            
+            <a href="#projects" class="btn btn-secondary">
+              <span>Explore Projects</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+
+          <!-- Hero Social Links -->
+          <div class="hero-socials reveal-fade delay-5">
+            <span class="social-label">Connect</span>
+            <div class="social-links-row">
+              <a href="https://www.linkedin.com/in/aarebkhan/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://github.com/aarebkhan02" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="https://www.kaggle.com/aareb7" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Kaggle">
+                <span class="text-icon">K</span>
+              </a>
+              <a href="https://huggingface.co/aareb" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Hugging Face">
+                <span class="text-icon">🤗</span>
+              </a>
+              <a href="https://www.instagram.com/aarebkhxn" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#about" class="hero-scroll-indicator" aria-label="Scroll down to About section">
+          <div class="mouse-icon">
+            <span class="mouse-wheel"></span>
+          </div>
+          <span class="scroll-text">SCROLL</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 01 / ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        
+        <div class="section-label-header reveal-on-scroll">
+          <span class="section-num-label">01 / ABOUT</span>
+          <h2 class="section-title">A little about what I do.</h2>
+        </div>
+
+        <div class="about-editorial-layout reveal-on-scroll">
+          
+          <!-- Left Column: Prominent Statement -->
+          <div class="about-statement-col">
+            <p class="editorial-statement">
+              Combining <span class="highlight-text">web development</span>, <span class="highlight-text">data analysis</span>, and <span class="highlight-text">artificial intelligence</span> to build practical digital solutions.
+            </p>
+
+            <div class="about-meta-capsule">
+              <div class="meta-row">
+                <span class="meta-label">Domain</span>
+                <span class="meta-val">Full Stack · Data · AI</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Education</span>
+                <span class="meta-val">B.Tech CSE (RGPV)</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Location</span>
+                <span class="meta-val">Bhopal, M.P, India</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Interests</span>
+                <span class="meta-val">RAG, LLMs, Computer Vision</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative Body -->
+          <div class="about-narrative-col">
+            <div class="narrative-content">
+              <p>
+                I'm a Full Stack Web Developer, Data Analyst, and AI Engineer pursuing a BTech in Computer Science and Engineering.
+              </p>
+              <p>
+                I enjoy building responsive, user-focused web applications with authentication, API integration, database management, and dynamic interfaces.
+              </p>
+              <p>
+                My interests also extend to AI solutions involving RAG, semantic search, vector databases, and context-based question answering.
+              </p>
+              <p>
+                Alongside development, I work with datasets to identify trends, generate insights, and support data-driven decision-making.
+              </p>
+              <p>
+                I'm passionate about exploring emerging technologies and turning ideas into efficient, reliable, real-world applications.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02 / EXPERTISE (SKILLS) SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        
+        <div class="section-label-header reveal-on-scroll">
+          <span class="section-num-label">02 / EXPERTISE</span>
+          <h2 class="section-title">Technologies I work with.</h2>
+        </div>
+
+        <div class="skills-editorial-grid">
+          
+          <!-- Category 1: Web Development -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-head">
+              <span class="category-index">01</span>
+              <h3 class="skill-category-title">Web Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">MySQL</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Data Analysis -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-head">
+              <span class="category-index">02</span>
+              <h3 class="skill-category-title">Data Analysis</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Seaborn</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Machine Learning -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-head">
+              <span class="category-index">03</span>
+              <h3 class="skill-category-title">Machine Learning</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Supervised Learning</span>
+              <span class="skill-tag">Unsupervised Learning</span>
+              <span class="skill-tag">Scikit-Learn</span>
+              <span class="skill-tag">Pickle</span>
+              <span class="skill-tag">Joblib</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Deep Learning -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-head">
+              <span class="category-index">04</span>
+              <h3 class="skill-category-title">Deep Learning</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">ANN</span>
+              <span class="skill-tag">CNN</span>
+              <span class="skill-tag">RNN</span>
+              <span class="skill-tag">LSTM</span>
+              <span class="skill-tag">Transformers</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">Keras</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Computer Vision -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-head">
+              <span class="category-index">05</span>
+              <h3 class="skill-category-title">Computer Vision</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Image Classification</span>
+              <span class="skill-tag">Object Detection</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">ResNet50</span>
+              <span class="skill-tag">VGG16</span>
+              <span class="skill-tag">InceptionNet</span>
+              <span class="skill-tag">AlexNet</span>
+              <span class="skill-tag">YOLO</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Natural Language Processing -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-head">
+              <span class="category-index">06</span>
+              <h3 class="skill-category-title">Natural Language Processing</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">BERT</span>
+              <span class="skill-tag">BART</span>
+              <span class="skill-tag">GPT</span>
+              <span class="skill-tag">TF-IDF</span>
+              <span class="skill-tag">CBOW</span>
+              <span class="skill-tag">Word2Vec</span>
+              <span class="skill-tag">Named Entity Recognition</span>
+              <span class="skill-tag">Text Processing</span>
+              <span class="skill-tag">NLTK</span>
+            </div>
+          </div>
+
+          <!-- Category 7: Generative AI -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-head">
+              <span class="category-index">07</span>
+              <h3 class="skill-category-title">Generative AI</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">Groq</span>
+              <span class="skill-tag">Gemini</span>
+            </div>
+          </div>
+
+          <!-- Category 8: Tools & Deployment -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-head">
+              <span class="category-index">08</span>
+              <h3 class="skill-category-title">Tools & Deployment</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Streamlit</span>
+              <span class="skill-tag">Vercel</span>
+              <span class="skill-tag">Netlify</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03 / EXPERIENCE SECTION -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        
+        <div class="section-label-header reveal-on-scroll">
+          <span class="section-num-label">03 / EXPERIENCE</span>
+          <h2 class="section-title">Where I've contributed.</h2>
+        </div>
+
+        <div class="experience-editorial-wrap reveal-on-scroll">
+          <div class="experience-entry">
+            
+            <div class="experience-meta-col">
+              <span class="experience-tag">Internship</span>
+              <span class="experience-period">Internship Track</span>
+            </div>
+
+            <div class="experience-details-col">
+              <div class="experience-header">
+                <h3 class="experience-role">Software Development Intern</h3>
+                <h4 class="experience-company">Ethical Intelligence</h4>
+              </div>
+
+              <ul class="experience-responsibilities">
+                <li>
+                  <span class="dash-bullet">—</span>
+                  <span>Participated in developing a real-world e-commerce application.</span>
+                </li>
+                <li>
+                  <span class="dash-bullet">—</span>
+                  <span>Developed responsive frontend UI components using modern frameworks.</span>
+                </li>
+                <li>
+                  <span class="dash-bullet">—</span>
+                  <span>Integrated REST APIs for dynamic data rendering.</span>
+                </li>
+                <li>
+                  <span class="dash-bullet">—</span>
+                  <span>Collaborated with team members to improve UI performance and usability.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 04 / EDUCATION SECTION -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        
+        <div class="section-label-header reveal-on-scroll">
+          <span class="section-num-label">04 / EDUCATION</span>
+          <h2 class="section-title">Academic background.</h2>
+        </div>
+
+        <div class="education-editorial-grid reveal-on-scroll">
+          
+          <!-- Education 01: B.Tech -->
+          <div class="education-item">
+            <div class="education-header">
+              <span class="edu-timeline-badge">2024 – Present</span>
+              <span class="edu-status-badge">Currently in 2nd Year</span>
+            </div>
+            <h3 class="education-degree">Bachelor of Technology — Computer Science and Engineering</h3>
+            <p class="education-institution">All Saints' College, RGPV University</p>
+          </div>
+
+          <!-- Education 02: School -->
+          <div class="education-item">
+            <div class="education-header">
+              <span class="edu-timeline-badge">2012 – 2024</span>
+              <span class="edu-status-badge">75%</span>
+            </div>
+            <h3 class="education-degree">Senior Secondary Education</h3>
+            <p class="education-institution">All Saints' School, Gandhi Nagar, Bhopal</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 05 / SELECTED WORK (PROJECTS SHOWCASE) -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        
+        <div class="section-label-header reveal-on-scroll">
+          <span class="section-num-label">05 / SELECTED WORK</span>
+          <h2 class="section-title">Projects I've worked on.</h2>
+          <p class="section-subtext">A selection of projects exploring web development, artificial intelligence, and computer vision.</p>
+        </div>
+
+        <div class="projects-showcase-list">
+          
+          <!-- PROJECT 01: Modest Hijab Store -->
+          <article class="project-showcase-card reveal-on-scroll">
+            <div class="project-preview-wrap">
+              <div class="project-schematic store-schematic" aria-hidden="true">
+                <div class="schematic-canvas-bg"></div>
+                
+                <div class="schematic-mockup-frame">
+                  <div class="mockup-header-bar">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-url-bar">modest.co.in/store</span>
+                  </div>
+                  
+                  <div class="mockup-body">
+                    <div class="mockup-catalog-head">
+                      <span class="mockup-pill active">All Collection</span>
+                      <span class="mockup-pill">New Arrivals</span>
+                      <span class="mockup-pill">Premium Silk</span>
+                    </div>
+
+                    <div class="mockup-store-grid">
+                      <div class="store-grid-item">
+                        <div class="item-img-placeholder"></div>
+                        <div class="item-line"></div>
+                        <div class="item-line short"></div>
+                      </div>
+                      <div class="store-grid-item">
+                        <div class="item-img-placeholder"></div>
+                        <div class="item-line"></div>
+                        <div class="item-line short"></div>
+                      </div>
+                      <div class="store-grid-item">
+                        <div class="item-img-placeholder"></div>
+                        <div class="item-line"></div>
+                        <div class="item-line short"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info-wrap">
+              <div class="project-index-row">
+                <span class="project-index-label">01 / E-COMMERCE</span>
+              </div>
+
+              <h3 class="project-title">Modest Hijab Store</h3>
+              
+              <p class="project-description">
+                A React and Tailwind CSS e-commerce frontend featuring routing, product filtering, and a dynamic cart system.
+              </p>
+
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Tailwind CSS</span>
+                <span class="project-tag">Frontend</span>
+              </div>
+
+              <div class="project-cta-wrap">
+                <a href="https://www.hijabstore.modest.co.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary project-external-btn">
+                  <span>Visit Website</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: AI Chatbot — SHAWARMAA -->
+          <article class="project-showcase-card showcase-reverse reveal-on-scroll">
+            <div class="project-preview-wrap">
+              <div class="project-schematic bot-schematic" aria-hidden="true">
+                <div class="schematic-canvas-bg"></div>
+
+                <div class="schematic-mockup-frame">
+                  <div class="mockup-header-bar">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-url-bar">shawarmaa.streamlit.app</span>
+                  </div>
+
+                  <div class="mockup-body bot-body">
+                    <div class="chat-message user-msg">
+                      <span class="msg-bubble">Explain low-latency LLM inference architectures.</span>
+                    </div>
+
+                    <div class="chat-message bot-msg">
+                      <div class="msg-author-tag">
+                        <span class="bot-icon">AI</span>
+                        <span>SHAWARMAA · Groq LPU</span>
+                      </div>
+                      <span class="msg-bubble ai-bubble">
+                        Utilizing hardware-accelerated token streaming with memory retention buffers for instant conversational turns.
+                      </span>
+                    </div>
+
+                    <div class="chat-hud-metric">
+                      <span class="hud-pulse-dot"></span>
+                      <span class="hud-mono-text">Groq LPUs: 0.12s latency · Memory Context: Active</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info-wrap">
+              <div class="project-index-row">
+                <span class="project-index-label">02 / GENERATIVE AI</span>
+              </div>
+
+              <h3 class="project-title">AI Chatbot — SHAWARMAA</h3>
+              
+              <p class="project-description">
+                A Groq-powered chatbot featuring memory handling and real-time conversational flow.
+              </p>
+
+              <div class="project-tags">
+                <span class="project-tag">LLM</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Streamlit</span>
+              </div>
+
+              <div class="project-cta-wrap">
+                <a href="https://shawarmaa.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary project-external-btn">
+                  <span>Open Application</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: Face Mask Detection -->
+          <article class="project-showcase-card reveal-on-scroll">
+            <div class="project-preview-wrap">
+              <div class="project-schematic vision-schematic" aria-hidden="true">
+                <div class="schematic-canvas-bg"></div>
+
+                <div class="schematic-mockup-frame">
+                  <div class="mockup-header-bar">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-url-bar">masknomask.streamlit.app</span>
+                  </div>
+
+                  <div class="mockup-body vision-body">
+                    <div class="vision-viewport">
+                      <div class="vision-crosshair horizontal"></div>
+                      <div class="vision-crosshair vertical"></div>
+                      
+                      <!-- Bounding Box HUD -->
+                      <div class="vision-bbox">
+                        <div class="bbox-label">CLASS: MASK [0.98]</div>
+                        <span class="bbox-corner tl"></span>
+                        <span class="bbox-corner tr"></span>
+                        <span class="bbox-corner bl"></span>
+                        <span class="bbox-corner br"></span>
+                      </div>
+
+                      <div class="vision-telemetry">
+                        <span>MODEL: YOLOv8</span>
+                        <span>FPS: 30.2</span>
+                        <span>CONFIDENCE: 98.4%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info-wrap">
+              <div class="project-index-row">
+                <span class="project-index-label">03 / COMPUTER VISION</span>
+              </div>
+
+              <h3 class="project-title">Face Mask Detection</h3>
+              
+              <p class="project-description">
+                A YOLO-based object detection system deployed with a live interface using Streamlit.
+              </p>
+
+              <div class="project-tags">
+                <span class="project-tag">YOLO</span>
+                <span class="project-tag">OpenCV</span>
+                <span class="project-tag">Streamlit</span>
+              </div>
+
+              <div class="project-cta-wrap">
+                <a href="https://masknomask.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary project-external-btn">
+                  <span>Launch Demo</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 06 / CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        
+        <div class="contact-editorial-panel reveal-on-scroll">
+          
+          <div class="contact-split-layout">
+            
+            <!-- Left Info Column -->
+            <div class="contact-info-column">
+              <div class="section-label-header contact-header">
+                <span class="section-num-label">06 / CONTACT</span>
+                <h2 class="section-title">Have something in mind?</h2>
+                <p class="section-subtext">Have a project in mind or want to collaborate? Feel free to send a message or connect directly.</p>
+              </div>
+
+              <div class="contact-details-list">
+                <div class="contact-detail-item">
+                  <span class="detail-label">Direct Communication</span>
+                  <a href="mailto:aarebkhan02@gmail.com" class="detail-value-link">aarebkhan02@gmail.com</a>
+                </div>
+
+                <div class="contact-detail-item">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Bhopal, M.P, India</span>
+                </div>
+              </div>
+
+              <div class="contact-social-block">
+                <span class="social-label">Find Me Online</span>
+                <div class="contact-social-chips">
+                  <a href="https://www.linkedin.com/in/aarebkhan/" target="_blank" rel="noopener noreferrer" class="social-chip">
+                    <span>LinkedIn</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </a>
+                  <a href="https://github.com/aarebkhan02" target="_blank" rel="noopener noreferrer" class="social-chip">
+                    <span>GitHub</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </a>
+                  <a href="https://www.kaggle.com/aareb7" target="_blank" rel="noopener noreferrer" class="social-chip">
+                    <span>Kaggle</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </a>
+                  <a href="https://huggingface.co/aareb" target="_blank" rel="noopener noreferrer" class="social-chip">
+                    <span>Hugging Face</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </a>
+                  <a href="https://www.instagram.com/aarebkhxn" target="_blank" rel="noopener noreferrer" class="social-chip">
+                    <span>Instagram</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Interactive Form Column -->
+            <div class="contact-form-column">
+              <form class="contact-interactive-form" id="contact-form" action="mailto:aarebkhan02@gmail.com" method="POST" enctype="text/plain">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name" />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email Address</label>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="alex@company.com" required autocomplete="email" />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject" class="form-label">Subject</label>
+                  <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Project Inquiry / Collaboration" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message</label>
+                  <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4" placeholder="Tell me about your project, timeline, or idea..." required></textarea>
+                </div>
+
+                <div class="form-action-row">
+                  <button type="submit" class="btn btn-primary btn-full contact-submit-btn">
+                    <span>Send Message</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  </button>
+                </div>
+
+                <div id="contact-status-msg" class="contact-status-msg" aria-live="polite"></div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-bold">AAREB</span> <span class="logo-thin">KHAN</span>
+        </a>
+        <p class="footer-tagline">Building, learning, and creating.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/aarebkhan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/aarebkhan02" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.kaggle.com/aareb7" target="_blank" rel="noopener noreferrer">Kaggle</a>
+        <a href="https://huggingface.co/aareb" target="_blank" rel="noopener noreferrer">Hugging Face</a>
+        <a href="https://www.instagram.com/aarebkhxn" target="_blank" rel="noopener noreferrer" class="footer-social-link">Instagram</a>
+      </div>
+
+      <div class="footer-right">
+        <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+          <span>Top</span>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
