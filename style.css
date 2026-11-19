@@ -6,7 +6,7 @@
    Palette:
      Burgundy:      #7C0E44
      Rose Pink:     #BD5579
-     Soft Pink:     #F4DDE5
+     Slate Gray:    #666F80
      Pastel Yellow: #FFF6A9
      Dark Canvas:   #050505 / #0D0D0D
      Crisp White:   #FFFFFF
@@ -16,7 +16,7 @@
   /* Primary Solid Theme Colors */
   --c-burgundy: #7C0E44;
   --c-rose: #BD5579;
-  --c-soft-pink: #F4DDE5;
+  --c-soft-pink: #666F80;
   --c-pastel-yellow: #FFF6A9;
 
   /* Solid Monochrome Constants */
@@ -1198,7 +1198,7 @@ body {
 /* ==========================================================================
    05 / SELECTED WORK (PROJECTS) SECTION
    Theme: Each Project Card has a Distinct Color
-   Card 1: Soft Pink (#F4DDE5)
+   Card 1: Slate (#666F80)
    Card 2: Burgundy (#7C0E44)
    Card 3: Pastel Yellow (#FFF6A9)
    ========================================================================== */
@@ -1335,7 +1335,7 @@ body {
 }
 
 /* -------------------------------------------------------------
-   PROJECT 1: Modest Hijab Store -> Solid Soft Pink (#F4DDE5)
+   PROJECT 1: Modest Hijab Store -> Solid Slate (#666F80)
    ------------------------------------------------------------- */
 .projects-showcase-list .project-showcase-card:nth-child(1) {
   background-color: var(--c-soft-pink);
@@ -1384,7 +1384,7 @@ body {
 }
 
 .store-schematic .mockup-header-bar {
-  background-color: #F4DDE5;
+  background-color: #666F80;
   border-bottom: 1px solid var(--c-rose);
 }
 
@@ -1408,8 +1408,8 @@ body {
   font-weight: 700;
   padding: 4px 10px;
   border-radius: var(--radius-xs);
-  background-color: #F4DDE5;
-  color: var(--c-burgundy);
+  background-color: #666F80;
+  color: var(--c-white);
 }
 
 .mockup-pill.active {
@@ -1500,7 +1500,7 @@ body {
 }
 
 .thetidhkar-schematic .mockup-header-bar {
-  background-color: #F4DDE5;
+  background-color: #666F80;
   border-bottom: 1px solid var(--c-rose);
 }
 
@@ -1804,7 +1804,7 @@ body {
 /* ==========================================================================
    06 / CONTACT SECTION
    Theme: Left Card Solid Burgundy (#7C0E44)
-          Right Card Solid Soft Pink (#F4DDE5)
+          Right Card Solid Slate (#666F80)
    ========================================================================== */
 .contact-section {
   border-top: 1px solid var(--c-border-black);
