@@ -2302,14 +2302,25 @@ body {
     gap: 28px;
   }
 
+  .project-showcase-card:hover {
+    transform: none;
+  }
+
   .project-title {
     font-size: 1.5rem;
     line-height: 1.25;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .project-description {
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+  .project-cta-wrap .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .project-schematic {
@@ -2535,14 +2546,33 @@ body {
   }
 
   /* Projects */
+  .projects-showcase-list {
+    gap: 26px;
+  }
+
   .project-showcase-card {
-    padding: 18px 14px;
-    gap: 20px;
+    padding: 16px 14px;
+    gap: 18px;
     box-shadow: 4px 4px 0px var(--c-black);
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .project-info-wrap {
+    gap: 12px;
+  }
+
+  .project-index-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
   }
 
   .project-title {
     font-size: 1.25rem;
+    line-height: 1.25;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .project-description {
@@ -2550,65 +2580,186 @@ body {
     line-height: 1.55;
   }
 
+  .project-tags {
+    gap: 6px;
+    margin-top: 2px;
+  }
+
   .project-tag {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     padding: 3px 8px;
+    white-space: nowrap;
+  }
+
+  .project-cta-wrap {
+    margin-top: 6px;
   }
 
   .project-cta-wrap .btn {
     width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 0.88rem;
+  }
+
+  .project-preview-wrap {
+    width: 100%;
+    overflow: hidden;
   }
 
   .project-schematic {
     padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .schematic-mockup-frame {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .mockup-header-bar {
-    padding: 8px 10px;
+    padding: 7px 10px;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mockup-dot {
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
   }
 
   .mockup-url-bar {
-    max-width: 140px;
-    font-size: 0.65rem;
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    margin-left: 8px;
+    font-size: 0.62rem;
+    padding: 2px 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
   }
 
   .mockup-body {
     padding: 10px;
     gap: 8px;
+    box-sizing: border-box;
+  }
+
+  .mockup-catalog-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
   }
 
   .mockup-pill {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     padding: 3px 7px;
+    white-space: nowrap;
   }
 
   .mockup-store-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 6px;
   }
 
   .store-grid-item {
-    padding: 6px;
+    padding: 5px;
     gap: 4px;
+    min-width: 0;
   }
 
   .item-img-placeholder {
-    height: 38px;
+    height: 36px;
+  }
+
+  .item-line {
+    height: 4px;
+  }
+
+  .item-line.short {
+    height: 4px;
   }
 
   .chat-message .user-msg .msg-bubble,
+  .user-msg .msg-bubble {
+    font-size: 0.74rem;
+    padding: 6px 10px;
+    max-width: 88%;
+    line-height: 1.4;
+  }
+
+  .msg-author-tag {
+    font-size: 0.68rem;
+    gap: 5px;
+  }
+
+  .bot-icon {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+  }
+
   .ai-bubble {
-    font-size: 0.76rem;
-    padding: 7px 10px;
+    font-size: 0.74rem;
+    padding: 8px 10px;
+    max-width: 95%;
+    line-height: 1.4;
+  }
+
+  .chat-hud-metric {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed var(--c-rose);
+  }
+
+  .hud-pulse-dot {
+    width: 6px;
+    height: 6px;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  .hud-mono-text {
+    font-size: 0.62rem;
+    line-height: 1.35;
+    word-break: break-word;
   }
 
   .vision-viewport {
-    height: 110px;
+    height: 130px;
+    position: relative;
   }
 
   .vision-bbox {
-    width: 80px;
-    height: 60px;
+    width: 78px;
+    height: 52px;
+  }
+
+  .bbox-label {
+    top: -15px;
+    left: -2px;
+    font-size: 0.58rem;
+    padding: 1px 5px;
+    white-space: nowrap;
+  }
+
+  .vision-telemetry {
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    padding: 3px 6px;
+    font-size: 0.58rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    white-space: nowrap;
   }
 
   /* Contact */
@@ -2682,8 +2833,101 @@ body {
     font-size: 1.55rem;
   }
 
+  /* Projects on <= 360px */
+  .projects-showcase-list {
+    gap: 20px;
+  }
+
+  .project-showcase-card {
+    padding: 14px 10px;
+    gap: 14px;
+    box-shadow: 3px 3px 0px var(--c-black);
+  }
+
   .project-title {
     font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  .project-description {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .project-tag {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  .project-cta-wrap .btn {
+    padding: 10px 14px;
+    font-size: 0.84rem;
+  }
+
+  .project-schematic {
+    padding: 8px;
+  }
+
+  .mockup-header-bar {
+    padding: 6px 8px;
+  }
+
+  .mockup-url-bar {
+    font-size: 0.56rem;
+    padding: 1px 6px;
+  }
+
+  .mockup-body {
+    padding: 8px 6px;
+    gap: 6px;
+  }
+
+  .mockup-pill {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+  }
+
+  .mockup-store-grid {
+    gap: 4px;
+  }
+
+  .store-grid-item {
+    padding: 4px;
+    gap: 3px;
+  }
+
+  .item-img-placeholder {
+    height: 28px;
+  }
+
+  .chat-message .user-msg .msg-bubble,
+  .user-msg .msg-bubble,
+  .ai-bubble {
+    font-size: 0.68rem;
+    padding: 6px 8px;
+  }
+
+  .hud-mono-text {
+    font-size: 0.58rem;
+  }
+
+  .vision-viewport {
+    height: 115px;
+  }
+
+  .vision-bbox {
+    width: 66px;
+    height: 44px;
+  }
+
+  .bbox-label {
+    font-size: 0.52rem;
+    top: -14px;
+  }
+
+  .vision-telemetry {
+    font-size: 0.52rem;
+    padding: 2px 4px;
   }
 }
 
@@ -2698,6 +2942,19 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+  }
+
+  .project-showcase-card {
+    padding: 12px 8px;
+  }
+
+  .project-title {
+    font-size: 1.05rem;
+  }
+
+  .vision-telemetry {
+    font-size: 0.46rem;
+    padding: 1px 2px;
   }
 }
 
