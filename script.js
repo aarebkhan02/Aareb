@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initScrollProgress();
   initContactForm();
+  initCursorEffect();
 });
 
 /* ==========================================================================
@@ -386,3 +387,30 @@ function initContactForm() {
     }, 1200);
   });
 }
+
+/* ==========================================================================
+   CURSOR MOVING EFFECT
+   ========================================================================== */
+function initCursorEffect() {
+  const colors = ["#ffffff", "#e6e6e6", "#b0b0b0", "#666666", "#222222", "#000000"];
+  document.addEventListener("mousemove", (e) => {
+    const s = document.createElement("div");
+    s.className = "cursor-square";
+    const c = colors[Math.floor(Math.random() * colors.length)];
+    s.style.left = e.clientX + "px";
+    s.style.top = e.clientY + "px";
+    s.style.background = c;
+    if (c === "#000000" || c === "#222222") {
+      s.style.border = "1px solid #777777";
+      s.style.boxShadow = "0 0 10px #555555";
+    } else {
+      s.style.border = "1px solid #ffffff";
+      s.style.boxShadow = `0 0 12px ${c}`;
+    }
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 800);
+  });
+}
+
+
+
