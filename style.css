@@ -505,6 +505,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .social-icon-btn {
@@ -608,6 +609,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   padding-top: 14px;
 }
 
@@ -624,6 +626,8 @@ body {
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--c-pastel-yellow);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .status-pulse-dot {
@@ -631,6 +635,7 @@ body {
   height: 7px;
   border-radius: 50%;
   background-color: var(--c-pastel-yellow);
+  flex-shrink: 0;
 }
 
 .profile-location-tag {
@@ -639,6 +644,8 @@ body {
   font-weight: 800;
   color: var(--c-pastel-yellow);
   letter-spacing: 0.1em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Hero Scroll Mouse Indicator */
@@ -2108,7 +2115,7 @@ body {
   }
 
   .hero-profile-card {
-    max-width: 320px;
+    max-width: 350px;
     margin: 0 auto;
   }
 
@@ -2218,7 +2225,7 @@ body {
   }
 
   .hero-profile-card {
-    max-width: 320px;
+    max-width: 340px;
     margin: 0 auto;
     padding: 16px;
   }
@@ -2417,27 +2424,48 @@ body {
   }
 
   .hero-profile-card {
-    max-width: 270px;
-    padding: 12px;
-    box-shadow: 4px 4px 0px var(--c-black);
+    width: 100%;
+    max-width: 330px;
+    padding: 14px;
+    box-shadow: 5px 5px 0px var(--c-black);
+    margin: 0 auto;
   }
 
   .profile-card-decor {
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+  }
+
+  .decor-label {
+    font-size: 0.72rem;
   }
 
   .profile-card-footer {
-    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 12px;
   }
 
   .profile-status-pill {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     padding: 4px 10px;
+    gap: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-pulse-dot {
+    width: 6px;
+    height: 6px;
   }
 
   .profile-location-tag {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   /* About */
@@ -2621,8 +2649,33 @@ body {
   }
 
   .hero-profile-card {
-    max-width: 230px;
-    padding: 10px;
+    width: 100%;
+    max-width: 295px;
+    padding: 11px;
+    box-shadow: 4px 4px 0px var(--c-black);
+  }
+
+  .profile-card-footer {
+    gap: 6px;
+    padding-top: 10px;
+  }
+
+  .profile-status-pill {
+    font-size: 0.62rem;
+    padding: 4px 8px;
+    gap: 5px;
+    white-space: nowrap;
+  }
+
+  .status-pulse-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .profile-location-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
   }
 
   .section-title {
@@ -2631,6 +2684,20 @@ body {
 
   .project-title {
     font-size: 1.15rem;
+  }
+}
+
+/* Very Narrow Devices (<= 320px) */
+@media (max-width: 320px) {
+  .hero-profile-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .profile-card-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 }
 
