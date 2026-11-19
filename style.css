@@ -717,9 +717,9 @@ body {
 }
 
 .highlight-text {
-  color: var(--c-pastel-yellow);
+  color: var(--c-burgundy);
   text-decoration: underline;
-  text-decoration-color: var(--c-rose);
+  text-decoration-color: var(--c-pastel-yellow);
   text-underline-offset: 4px;
 }
 
